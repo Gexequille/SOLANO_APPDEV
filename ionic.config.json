@@ -1,0 +1,7 @@
+{
+  "name": "ASS2_SOLANO",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
