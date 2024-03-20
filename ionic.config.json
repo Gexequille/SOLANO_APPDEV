@@ -1,0 +1,7 @@
+{
+  "name": "OSILA-PADLAN-SOLANO",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
