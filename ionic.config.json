@@ -1,0 +1,7 @@
+{
+  "name": "ACTIVITY-5-SOLANO",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
