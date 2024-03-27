@@ -20,22 +20,40 @@
   </ion-item>
 </ion-list>
 
+<ion-content>
 <ion-card>
   <ion-card-header>
-    <ion-card-title>Covid-19 Data</ion-card-title>
+    <ion-card-title>Harry Potter Series</ion-card-title>
   </ion-card-header>
   <ion-card-content>
-    <div *ngFor="let data of covidData">
-      <h3>{{ data.Country_text }}</h3>
-      <p>Last Update: {{ data.Last_Update }}</p>
-      <p>New Cases: {{ data.New_Cases_text }}</p>
-      <p>New Deaths: {{ data.New_Deaths_text }}</p>
-      <p>Total Cases: {{ data.Total_Cases_text }}</p>
-      <p>Total Deaths: {{ data.Total_Deaths_text }}</p>
-      <p>Total Recovered: {{ data.Total_Recovered_text }}</p>
-    </div>    
+    <div *ngFor="let harry of potter">
+      {{ harry.title }}
+    </div>
   </ion-card-content>
 </ion-card>
+</ion-content>
+
+
+<ion-fab slot="fixed" vertical="bottom" horizontal="end">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side = "top">
+    <ion-fab-button>
+      <ion-icon name = "logo-facebook"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name = "logo-instagram"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name = "logo-twitter"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name = "logo-discord"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+
 
 <ion-content>
 <ion-tabs>

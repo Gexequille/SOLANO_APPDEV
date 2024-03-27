@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
-import { Covid19Service } from '../covid19.service';
-import { catchError } from 'rxjs/operators';
 import { AlertController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { HasEventTargetAddRemove } from 'rxjs/internal/observable/fromEvent';
+import { HarryService } from '../harry.service';
+import { harryPotter } from '../model/harry.model';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,19 +15,21 @@ import { ToastController } from '@ionic/angular';
 export class DashboardPage implements OnInit {
 
   username: any;
-  covidData: any[] = [];
+  potter: harryPotter [] = [];
 
   constructor(private authenticate: AuthenticationService,
     private router: Router,
     private alertControl: AlertController,
     private toastControl: ToastController,
-    private covid19: Covid19Service
+    private harry: HarryService
     ) {}
 
   ngOnInit(){
     this.authenticate.authenticated = false;
     this.username = localStorage.getItem('loggedInUser');
-    this.fetchCovidData();
+    this.harry.getHarry().subscribe((item: harryPotter[]) => {
+      this.potter = item;
+    });
   }
 
   async logout() {
@@ -63,14 +66,4 @@ export class DashboardPage implements OnInit {
     toast.present();
   }
 
-  fetchCovidData() {
-    this.covid19.getCovidData().subscribe(
-      (data: Object) => {
-        this.covidData = data as any[]; 
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }  
 }
