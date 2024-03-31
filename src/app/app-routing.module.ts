@@ -10,17 +10,18 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
-    path: 'dashboard',
+    path: 'dashboard/home',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule),
     canActivate: [AuthenticationService]
   },
   {
     path: 'calculator',
-    loadChildren: () => import('./calculator/calculator.module').then( m => m.CalculatorPageModule)
+    loadChildren: () => import('./calculator/calculator.module').then( m => m.CalculatorPageModule),
+    canDeactivate: [AuthenticationService]
   },
   {
     path: 'login',

@@ -10,4 +10,7 @@ export class AuthenticationService {
   canActivate(){
     return this.authenticated;
   }
+  canDeactivate(){
+    return this.authenticated = true;
+  }
 }
