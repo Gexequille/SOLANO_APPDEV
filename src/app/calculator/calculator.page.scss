@@ -1,0 +1,12 @@
+.buttons {
+    font-size: 50px;
+    padding: 32px 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* evenly distribute buttons */
+    gap: 10px; /* add some space between buttons */
+  }
+  
+  .buttons ion-button {
+    width: 100%;
+  }
+  
