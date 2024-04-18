@@ -1,2 +1,28 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+.ios body {
+    --ion-background-color: #ffe0f0;
+    --ion-text-color: #ff1694; 
+    --ion-color-primary: #ff80bf; 
+    --ion-color-secondary: #ffa0cf; 
+    --ion-color-tertiary: #ff5c8d; 
+    --ion-color-success: #ffb3d1; 
+    --ion-color-warning: #ff4976; 
+    --ion-color-danger: #ff9ab8; 
+    --ion-color-light: #fff0f6; 
+    --ion-color-medium: #ff1694; 
+    --ion-color-dark: #ff006a; 
+  }
+  
+  .md body {
+    --ion-background-color: #ffe6ee;
+    --ion-text-color: #ff1694;
+    --ion-color-primary: #ff73a8; 
+    --ion-color-secondary: #ff8bb3; 
+    --ion-color-tertiary: #ff5591; 
+    --ion-color-success: #ffb3d1; 
+    --ion-color-warning: #ff4976; 
+    --ion-color-danger: #ff9ab8;
+    --ion-color-light: #ffe0f0;
+    --ion-color-medium: #ff1694; 
+    --ion-color-dark: #ff006a;
+  }
+  
