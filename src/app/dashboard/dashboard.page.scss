@@ -1,55 +1,45 @@
-.dashboard-text {
-    font-family: 'Arial', sans-serif;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    background: var(--ion-background-color);
-    color: var(--ion-text-color);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .dashboard-text:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dashboard-text h2 {
-    font-size: 24px;
-    color: var(--ion-color-primary);
-    margin-top: 20px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid var(--ion-color-secondary);
-  }
-  
-  .dashboard-text p {
-    font-size: 18px;
-    color: var(--ion-color-tertiary);
-    line-height: 1.6;
-    margin-bottom: 10px;
-  }
-  
-  .dashboard-text p em {
-    font-style: italic;
-    color: var(--ion-color-success);
-  }
-  
-  .dashboard-text h2:first-child {
-    margin-top: 0;
-  }
-  
-  .dashboard-text h2:last-child {
-    margin-bottom: 10px;
-  }
-  
-.img{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 400px;
-    height: auto;
-    margin-left:550px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.dashboard-content {
+  --background: url('https://scontent.fmnl8-3.fna.fbcdn.net/v/t39.30808-6/440322333_980590983784187_7438862669102397040_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF1l19QXQ7yo2JOoIXk40xwDb87CXr0n_cNvzsJevSf9y13QY4ijR2LE0QsZ3DqPq9RLl5ueY-6Vc8MknT99vbJ&_nc_ohc=LA6JLubcp04Ab5AVZpH&_nc_zt=23&_nc_ht=scontent.fmnl8-3.fna&oh=00_AfBbCrRFmhY8HcxxjwK3HJm6Tkrn-pnh88Z1MEU3iE6TNg&oe=6636B8AE') center center / cover no-repeat; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+.dashboard-text {
+  width: 700px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.25); 
+  margin-left: 100px; 
+  padding: 30px; 
+  border-radius: 30px;
+  margin-top: 100px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dashboard-text h2 {
+  color: white;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.dashboard-text p {
+  color: white;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+
+.dashboard-text p a {
+  color: white;
+}
+
+.dashboard-text p a:hover {
+  text-decoration: underline;
+}
+
+ion-button {
+  margin-top: 20px;
+  margin-left: 350px;
+  border-radius: 30%;
+  width: 10%; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

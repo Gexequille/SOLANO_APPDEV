@@ -34,6 +34,7 @@ export class SignInPage implements OnInit {
       .then((userCredential) => {
         const user = userCredential.user;
         this.router.navigate(['dashboard']); 
+        this.presentAlert('Success', 'You have successfully signed in!');
       })
       .catch((error) => {
         const errorCode = error.code;
