@@ -1,0 +1,19 @@
+ion-content {
+    --background: url('https://img.freepik.com/free-photo/purple-mountain-landscape_1048-10720.jpg?size=626&ext=jpg&ga=GA1.2.273627957.1714741202&semt=ais') center center / cover no-repeat;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    align-items: flex-start; 
+    height: 100vh;
+}
+
+ion-card.ion-item{
+    max-width: 250px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-top: 20px; 
+    margin-left: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

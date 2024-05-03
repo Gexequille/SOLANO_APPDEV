@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Update Anime</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Update Anime</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngIf="anime">
+    <ion-card-header>
+      <ion-card-title>{{ anime.title }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <!-- Anime details form -->
+      <ion-item>
+        <ion-label position="stacked">Title</ion-label>
+        <ion-input type="text" [(ngModel)]="updatedAnime.title"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Episodes</ion-label>
+        <ion-input type="number" [(ngModel)]="updatedAnime.episodes"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Is Ongoing?</ion-label>
+        <ion-toggle [(ngModel)]="isOngoingValue"></ion-toggle>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Genre</ion-label>
+        <ion-select multiple="true" [(ngModel)]="updatedAnime.genres">
+          <ion-select-option *ngFor="let genre of genres" [value]="genre">{{ genre }}</ion-select-option>
+        </ion-select>
+      </ion-item>      
+
+      <ion-item>
+        <ion-label position="stacked">Rating</ion-label>
+        <ion-input type="number" [(ngModel)]="updatedAnime.rating"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Release Date</ion-label>
+        <ion-input type="date" [(ngModel)]="updatedAnime.released"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="updateAnime()">Save</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

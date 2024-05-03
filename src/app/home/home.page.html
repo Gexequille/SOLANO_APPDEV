@@ -1,20 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="home-content">
+  <!-- Anime List -->
+  <h2>ANIME LIST</h2>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card *ngFor="let anime of animeList" class="anime-card1">
+    <ion-card-header>
+      <ion-card-title>{{ anime.title }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- Anime Information -->
+  <h2>ANIME INFORMATION</h2>
+
+  <ion-card *ngFor="let anime of animeList" class="anime-card2">
+    <ion-card-header>
+      <ion-card-title>{{ anime.title }}</ion-card-title>
+      <ion-card-subtitle>{{ anime.released }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Episodes: {{ anime.episodes }} <br>
+      Rating: {{ anime.rating }} <br>
+      Ongoing: {{ anime.isOngoing }} <br>
+      Genres: {{ anime.genres }}
+    </ion-card-content>
+    <ion-button expand="block" (click)="confirmDelete(anime.id)">Delete Anime</ion-button>
+    <ion-button expand="block" [routerLink]="['/update', anime.id]">Update Anime</ion-button>
+  </ion-card>
+
+  <ion-button expand="block" (click)="create()" class="add-anime-button">Add Anime</ion-button>
+  <br>
+  <ion-button expand="block" (click)="signout()" class = "signout">Sign out</ion-button>
 </ion-content>

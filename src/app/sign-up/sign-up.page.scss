@@ -1,0 +1,58 @@
+ion-content{
+  --background: url('https://img.freepik.com/free-photo/purple-mountain-landscape_1048-10720.jpg?size=626&ext=jpg&ga=GA1.2.273627957.1714741202&semt=ais') 
+  center center / cover no-repeat; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+  
+.box{
+  width: 250px;
+  height: auto;
+  background-color: rgba(255, 255, 255, 0.25); 
+  margin-left: 30px; 
+  padding: 10px; 
+  border-radius: 30px;
+  margin-top: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+  ion-item {
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  ion-item.one, ion-item.two {
+    margin: 10px 0;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 30%;
+    width: 50%; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .icon{
+    max-width: 20px;
+    padding-top: 2px;
+  }
+
+  p {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  }
+  
+  p a {
+    text-decoration: none;
+  }
+  
+  p a:hover {
+    text-decoration: underline;
+  }

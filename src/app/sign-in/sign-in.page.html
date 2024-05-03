@@ -1,0 +1,19 @@
+<ion-content >
+  <div class="box">
+    <ion-item class = "one">
+        
+        <ion-label position="floating"><ion-icon name="mail-outline"  class = "icon"></ion-icon> Email</ion-label>
+        <ion-input type="email" [(ngModel)]="email" [clearInput]="true"></ion-input>
+      </ion-item>
+
+      <ion-item class = "two">
+        <ion-label position="floating"> <ion-icon name="lock-closed-outline"  class = "icon"></ion-icon> Password</ion-label>
+        <ion-input type="password" [clearInput]="true" [(ngModel)]="password"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" (click)="signin()">Sign In</ion-button>
+
+      <p>Don't have an account? <a routerLink="/sign-up">Sign Up</a></p>
+  </div>
+</ion-content>
+
